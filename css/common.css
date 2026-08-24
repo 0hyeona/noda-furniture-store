@@ -69,3 +69,8 @@ html {
     font-size: var(--fs-pc);
     font-family: 'pretendard', sans-serif;
 }
+
+.common-frame {
+    padding: 0 var(--space-2x-large);
+    border: 1px solid blue;
+}
