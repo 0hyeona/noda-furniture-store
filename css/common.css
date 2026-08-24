@@ -1,0 +1,71 @@
+/* 변수 선언 */
+:root {
+    /* 디바이스별 폰트 사이즈 */
+    --fs-pc: 16px;
+    --fs-pad: 14px;
+    --fs-mobile: 12px;
+
+    /* 행간 */
+    --lh1: 1.2;
+    --lh2: 1.45;
+
+    /* 태그별 폰트 사이즈 */
+    --fs--h4: 1.25rem;
+    --fs--h3: 1.5625rem;
+    --fs--h2: 1.9531rem;
+    --fs--h1: 2.4414rem;
+
+    --fs-body1: 1rem;
+    --fs-body2: 0.85rem;
+    --fs-detail: 0.7225rem;
+
+    /* 폰트 굵기 */
+    --fw1: 400;
+    --fw2: 700;
+
+    /* 여백 */
+    --space-normal: 1rem;
+    --space-1x-large: 2rem;
+    --space-2x-large: 3rem;
+    --space-3x-large: 6rem;
+
+    --space-1x-small: 0.5rem;
+    --space-2x-small: 0.25rem;
+
+    /* 색상 */
+    --brown-0: #C7C3BF;
+    --brown-1: #C3B8A9;
+    --brown-2: #BCAA91;
+    --brown-3: #B29978;
+    --brown-4: #A3855E;
+    --brown-5: #8E6E45;
+    --brown-6: #73552D;
+    --brown-7: #513818;
+    --brown-8: #291B08;
+    --brown-9: #000000;
+
+    /* 그레이 컬러 */
+    --gray-0: #FFFFFF;
+    --gray-1: #F8F9FA;
+    --gray-2: #EEEFF2;
+    --gray-3: #E0E1E6;
+    --gray-4: #CDCED3;
+    --gray-5: #B4B5BA;
+    --gray-6: #949499;
+    --gray-7: #6B6C6F;
+    --gray-8: #3D3D3F;
+    --gray-9: #0C0C0D;
+
+    /* 대표 컬러 */
+    --main-bg: #CBB79F;
+    --main: #9A8170;
+    --sub-1: #F5F1E9;
+    --sub-2: #292A27;
+    --icon: #9A0101;
+}
+
+
+html {
+    font-size: var(--fs-pc);
+    font-family: 'pretendard', sans-serif;
+}
