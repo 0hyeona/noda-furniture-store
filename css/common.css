@@ -62,15 +62,46 @@
     --sub-1: #F5F1E9;
     --sub-2: #292A27;
     --icon: #9A0101;
+
+
+    h1{font-size: var(--fs-h1)};
+    h2{font-size: var(--fs-h2)};
+    h3{font-size: var(--fs-h3)};
+    h4{font-size: var(--fs-h4)};
+    h5{font-size: var(--fs-h5)};
+    h6{font-size: var(--fs-h6)};
 }
 
 
 html {
     font-size: var(--fs-pc);
     font-family: 'pretendard', sans-serif;
+    color : var(--gray-9);
+    font-weight: var(--fw1);
 }
 
 .common-frame {
     padding: 0 var(--space-2x-large);
-    border: 1px solid blue;
+}
+
+
+@media (max-width:1024px) {
+    html { 
+        font-size:var(--fs-pad);
+    }
+
+    .common-frame {
+        padding: 0 var(--space-1x-large)
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: var(--fs-mobile);
+    }
+
+    .common-frame {
+        padding: 0 var(--space-1x-large)
+    }
 }
