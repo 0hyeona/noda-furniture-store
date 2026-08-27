@@ -41,3 +41,20 @@ gnbSmartList.forEach((li, idx) => {
         gnb2DepthsList[idx].classList.add('on');
     })
 });
+
+
+// 슬라이드 영역 
+const station = new Swiper('.hero-slider', {
+    // 반복
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+
+    speed: 1000
+});
