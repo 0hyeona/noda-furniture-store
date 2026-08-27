@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js" defer></script>
 </head>
 
 <body>
+    <!-- 데스크탑용 헤더 -->
     <header class="pc">
         <div class="header-top">
             <div class="common-frame">
@@ -63,7 +67,7 @@
                         <li>
                             <a href="./index.html">HOME</a>
                         </li>
-                        <li>
+                        <li class="on">
                             <a href="#">NEW</a>
                             <div class="gnb2depths">
                                 <div class="common-frame">
@@ -384,6 +388,8 @@
             </div>
         </div>
     </header>
+
+    <!-- 패드 / 모바일용 헤더 -->
     <div class="smart-header">
         <div class="common-frame">
             <div class="logo">
@@ -399,6 +405,7 @@
         </div>
     </div>
 
+    <!-- 패드 / 모바일용 전체 메가메뉴 -->
     <div class="smart-overlay-menu">
         <div class="smart-overlay-menu-1">
             <div class="common-frame">
@@ -766,6 +773,38 @@
                     </section>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- 히어로배너 -->
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img class='pc' src="./img/herobanner-pc-1.jpg" alt="NODA의 2026 컬렉션을 만나보세요.">
+                <img class='pad' src="./img/herobanner-pad-1.jpg" alt="NODA의 2026 컬렉션을 만나보세요.">
+                <img class='mobile' src="./img/herobanner-mobile-1.jpg" alt="NODA의 2026 컬렉션을 만나보세요.">
+            </div>
+            <div class="swiper-slide">
+                <img class='pc' src="./img/herobanner-pc-2.jpg" alt="일상에 자연스럽게 스며드는 디자인, NODA의 새로운 컬렉션을 만나보세요.">
+                <img class='pad' src="./img/herobanner-pad-2.jpg" alt="일상에 자연스럽게 스며드는 디자인, NODA의 새로운 컬렉션을 만나보세요.">
+                <img class='mobile' src="./img/herobanner-mobile-2.jpg" alt="일상에 자연스럽게 스며드는 디자인, NODA의 새로운 컬렉션을 만나보세요.">
+            </div>
+            <div class="swiper-slide">
+                <img class='pc' src="./img/herobanner-pc-3.jpg" alt="감각적인 공간을 위한 특별한 혜택, 베스트셀러 가구를 한정 기간 특별가로 만나보세요.">
+                <img class='pad' src="./img/herobanner-pad-3.jpg" alt="감각적인 공간을 위한 특별한 혜택, 베스트셀러 가구를 한정 기간 특별가로 만나보세요.">
+                <img class='mobile' src="./img/herobanner-mobile-3.jpg" alt="감각적인 공간을 위한 특별한 혜택, 베스트셀러 가구를 한정 기간 특별가로 만나보세요.">
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="banner-line">
+        <div class="common-frame">
+            <span>NODA UPDATE</span>
+            <h4>새롭게 업데이트된 NODA의 소식과 다양한 Notice를 만나보세요.</h4>
+            <a href="#">자세히 보기 <img src="./img/icon-arrow-right-black.svg" alt="공지사항 자세히 보기"></a>
         </div>
     </div>
 </body>
