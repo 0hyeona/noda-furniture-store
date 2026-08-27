@@ -1,0 +1,15 @@
+.hero-slider {
+    width: 100%;
+    --swiper-pagination-color: var(--main);
+    --swiper-pagination-bullet-inactive-color: var(--gray-0);
+}
+
+.hero-slider .swiper-pagination-bullets,
+.hero-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+.hero-slider .swiper-pagination-custom,
+.hero-slider .swiper-pagination-fraction {
+    bottom: 1rem;
+    left: 0;
+    top: var(--swiper-pagination-top, auto);
+    width: 100%;
+}
