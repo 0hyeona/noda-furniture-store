@@ -125,6 +125,9 @@
     transform: scale(1.1);
 }
 
+.con1 {
+    padding: 0 var(--space-2x-large);
+}
 
 
 /* 패드 반응형 */
