@@ -58,3 +58,25 @@ const station = new Swiper('.hero-slider', {
 
     speed: 1000
 });
+
+
+// 카드리스트 
+const cardList = new Swiper('.cardlist-wrap', {
+    autoplay: {
+        delay:3000,
+    }, 
+     breakpoints: {    
+        0: {
+            slidesPerView: 2.2,  
+            spaceBetween: 12,
+        }, 
+        768: {
+            slidesPerView: 3.2, 
+            spaceBetween: 14,
+        }, 
+        1024: {
+            slidesPerView: 4, 
+            spaceBetween: 16,
+        }
+    }
+});
