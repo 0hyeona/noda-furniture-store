@@ -70,6 +70,10 @@ const cardList = new Swiper('.cardlist-wrap', {
             slidesPerView: 2.2,  
             spaceBetween: 12,
         }, 
+        340: { 
+            slidesPerView: 1.2, 
+            spaceBetween: 12,
+        },
         768: {
             slidesPerView: 3.2, 
             spaceBetween: 14,
