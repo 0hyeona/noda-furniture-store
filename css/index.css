@@ -6,7 +6,7 @@
     --swiper-pagination-bullet-inactive-color: var(--gray-0);
 }
 
-.hero-slider img { 
+.hero-slider img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -60,12 +60,80 @@
     height: 0.875rem;
 }
 
+/* 카테고리 영역 */
+.con1 {
+    padding: var(--space-3x-large) 0;
+}
+
+.title {
+    /* border: 1px solid red; */
+    text-align: center;
+    color: var(--brown-900);
+    font-weight: var(--fw2);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.title h1 {
+    font-size: 2.4375rem;
+}
+
+.title p {
+    font-size: 1rem;
+}
+
+.cardlist-wrap {
+    width: 100%;
+}
+
+.cardlist>li>a {
+    /* border: 1px solid red; */
+    display: block;
+    line-height: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover {
+    position: absolute;
+    background: linear-gradient(rgba(50, 45, 45, 0.2) 0%, rgba(64, 48, 48, 0.4) 50%, rgba(64, 48, 48, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: var(--fw2);
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease 0s;
+}
+
+.cardlist>li>a img {
+    transition: all 0.6s ease 0s;
+}
+
+.cover:hover {
+    opacity: 0;
+}
+
+.cardlist>li>:hover>a>img {
+    transform: scale(1.1);
+}
+
+
+
 /* 패드 반응형 */
 
 @media (max-width: 1024px) {
     .hero-slider {
         height: 900px;
     }
+
     .common-frame {
         justify-content: space-between;
         gap: initial;
