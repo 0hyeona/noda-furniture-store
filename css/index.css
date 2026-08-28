@@ -1,7 +1,15 @@
+/* 히어로 배너 */
 .hero-slider {
     width: 100%;
+    height: 810px;
     --swiper-pagination-color: var(--main);
     --swiper-pagination-bullet-inactive-color: var(--gray-0);
+}
+
+.hero-slider img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-slider .swiper-pagination-bullets,
@@ -12,4 +20,71 @@
     left: 0;
     top: var(--swiper-pagination-top, auto);
     width: 100%;
+}
+
+/* 띠배너 */
+.banner-line {
+    background-color: var(--gray-0);
+}
+
+.banner-line .common-frame {
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 8.5rem;
+}
+
+.banner-line .common-frame span {
+    font-size: var(--fs-body2);
+}
+
+.banner-line .common-frame h4 {
+    font-size: var(--fs-body1);
+    font-weight: var(--fw2);
+}
+
+.btn-style {
+    padding: 0 0.75rem;
+    height: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--sub-2);
+    font-size: var(--fs-body2);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.banner-line .common-frame .btn-style img {
+    height: 0.875rem;
+}
+
+/* 패드 반응형 */
+
+@media (max-width: 1024px) {
+    .hero-slider {
+        height: 900px;
+    }
+    .common-frame {
+        justify-content: space-between;
+        gap: initial;
+    }
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .banner-line .common-frame span {
+        display: none;
+    }
+
+    .hero-slider {
+        height: 900px;
+    }
+}
+
+@media (max-width: 340px) {
+    .banner-line .common-frame {
+        gap: 1rem;
+    }
 }
