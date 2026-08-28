@@ -1,7 +1,20 @@
-header {}
-
+header {
+    /* 공중에 뜨게 되어 화면 기준으로 배치됨 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:100;
+    width: 100%;
+}
+main {
+    margin-top: 154px;
+}
 .smart-overlay-menu {
     display: none;
+}
+
+.header-top {
+    background-color: var(--gray-0);
 }
 
 .header-top .common-frame {
@@ -109,6 +122,7 @@ header {}
 
 .smart-header {
     display: none;
+    height: 5rem;
     /* border: 1px solid red; */
 }
 
@@ -139,6 +153,7 @@ header {}
     flex-direction: column;
     transform: translateX(100%);
     transition: all 0.6s ease 0s;
+    z-index: 101;
 }
 
 .smart-overlay-menu.on {
@@ -253,13 +268,25 @@ header {}
 
 /* 반응형 pad */
 @media (max-width:1024px) {
+    main { 
+        margin-top: 5rem;
+    }
     .pc {
         display: none;
     }
 
     .smart-header {
         display: block;
+        height: 5rem;
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
     }
+    .logo img {
+    height: 5rem;
+}
+    
 }
 
 
