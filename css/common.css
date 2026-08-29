@@ -111,6 +111,7 @@ html {
 
 .common-frame {
     padding: 0 var(--space-2x-large);
+    background-color: white;
 }
 
 /* 슬라이드 배너 이미지 */
