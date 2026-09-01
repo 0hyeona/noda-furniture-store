@@ -127,14 +127,10 @@
 }
 
 /* 스와이퍼 리뷰 카드리스트 영역 */
-.review-story-wrap {
-    width: 100%;
-}
-
-.review-story {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+.review-story>.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .review-story>.swiper-slide {
@@ -269,15 +265,64 @@
     color: var(--icon);
 }
 
-.sale { 
+.sale {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* 최소 너비가 auto / .desc-1에 white-space가 nowrap이기에 최소 너비를 밀어냄 */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* 최소 크기와 너비를 설정 : minmax() */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 3rem 1rem;
+}
+
+/* 한 줄 말줄임과 관련이 있음 */
+.sale > li,
+.sale > li > a,
+.sale-txt {
+    min-width: 0;
+}
+
+.con3 {
+    padding: 6rem 0;
+}
+
+.sale li figure {
+    line-height: 0;
+    margin-bottom: 1rem;
+}
+
+.sale li figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-heart {
+    padding-top: 1rem;
+}
+
+.sale-txt {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.sale-txt .desc-0 {
+    color: var(--gray-5);
+}
+
+.title-1 {
+    font-weight: var(--fw2);
+}
+
+/* 말줄임표 표시 */
+.desc-1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 
 /* 패드 반응형 */
-
 @media (max-width: 1024px) {
     .hero-slider {
         height: 900px;
@@ -286,6 +331,10 @@
     .common-frame {
         justify-content: space-between;
         gap: initial;
+    }
+
+    .sale {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -317,6 +366,9 @@
         color: var(--icon);
     }
 
+    .sale {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 340px) {
