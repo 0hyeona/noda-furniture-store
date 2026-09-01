@@ -59,7 +59,6 @@ main {
     background-color: #fff;
     padding: 1.75rem 0;
     display: none;
-    box-shadow: 0 10px 10px #fafafa21;
 }
 
 .gnb>li:hover .gnb2depths {
