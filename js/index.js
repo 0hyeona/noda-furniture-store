@@ -86,26 +86,18 @@ const cardList = new Swiper('.cardlist-wrap', {
 });
 
 // 리뷰 카드리스트 
-const reviewCardstory = new Swiper('.review-stroy-wrap', {
-    autoplay: {
-        delay:3000,
-    }, 
-     breakpoints: {    
+const reviewStoryWrap = new Swiper('.review-story-wrap', {
+    slidesPerView: 4,
+    spaceBetween: 16,
+    breakpoints: {
         0: {
-            slidesPerView: 2.2,  
-            spaceBetween: 12,
-        }, 
-        340: { 
-            slidesPerView: 1.2, 
-            spaceBetween: 12,
+            slidesPerView: 2.5,
         },
         768: {
-            slidesPerView: 3.2, 
-            spaceBetween: 14,
-        }, 
+            slidesPerView: 4,
+        },
         1024: {
-            slidesPerView: 4, 
-            spaceBetween: 16,
+            slidesPerView: 4,
         }
     }
 });
