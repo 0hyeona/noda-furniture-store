@@ -11,6 +11,7 @@ main {
 }
 .smart-overlay-menu {
     display: none;
+    z-index:1100;
 }
 
 .header-top {
@@ -281,6 +282,7 @@ main {
         width: 100%;
         top:0;
         left:0;
+        z-index:1000;
     }
     .logo img {
     height: 5rem;

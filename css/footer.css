@@ -1,0 +1,126 @@
+footer {
+    background-color: var(--gray-9);
+    color: var(--gray-0);
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.footer-dark {
+    background-color: var(--gray-9);
+    color: var(--gray-0);
+
+}
+
+.foot-top .foot-menu1 {
+    display: flex;
+    gap: var(--space-1x-large);
+    padding-bottom: var(--space-1x-large)
+}
+
+.foot-menu1 li {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw2);
+}
+
+.foot-menu1 li:nth-child(2) {
+    color: var(--main-bg);
+}
+
+
+.foot-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-info {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    gap: var(--space-normal);
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: var(--space-normal);
+}
+
+
+.customer-service {
+    height: 100%;
+    /* border: 1px solid blue; */
+    display: grid;
+    gap: var(--space-normal);
+}
+
+.info-row dd,
+.info-row p {
+    font-weight: var(--fw2);
+}
+
+.foot-top {
+    /* border: 1px solid pink; */
+    padding-bottom: var(--space-1x-large);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-normal);
+}
+
+.content .txt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-normal)
+}
+
+.common-frame .foot-top+.content {
+    padding-bottom: var(--space-1x-large);
+}
+
+.content .txt h3 {
+    font-weight: var(--fw2);
+}
+
+.cs-block .info-row>p {
+    font-size: var(--fs--h4);
+}
+.content .txt p {
+    margin: 0;
+}
+
+.content figure {
+    display: flex;
+    align-items: center;
+    gap: var(--space-normal);
+}
+
+@media (max-width: 1024px) {
+    .foot-main {
+        display: block;
+    }
+
+    .company-info,
+    .customer-service {
+        width: 100%;
+    } 
+    .company-info {
+      padding-bottom: var(--space-1x-large);
+    }
+
+    figure, .txt {
+        /* justify-content: center; */
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+  .info-row {
+    grid-template-columns: 1fr;
+  }
+  .company-info {
+    gap: var(--space-1x-large);
+  }
+}
