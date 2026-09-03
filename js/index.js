@@ -60,12 +60,13 @@ const station = new Swiper('.hero-slider', {
 });
 
 
-// 카드리스트 
+// 카드리스트
 const cardList = new Swiper('.cardlist-wrap', {
+    grabCursor: true,
     autoplay: {
         delay:3000,
-    }, 
-     breakpoints: {    
+    },
+     breakpoints: {
         0: {
             slidesPerView: 2.2,  
             spaceBetween: 12,
@@ -85,19 +86,19 @@ const cardList = new Swiper('.cardlist-wrap', {
     }
 });
 
-// 리뷰 카드리스트 
+// 리뷰 카드리스트
 const reviewStoryWrap = new Swiper('.review-story-wrap', {
-    slidesPerView: 4,
-    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: 1.1,
+    spaceBetween: 12,
     breakpoints: {
         0: {
-            slidesPerView: 2.5,
+            slidesPerView: 1.5,
+            spaceBetween: 12,
         },
         768: {
             slidesPerView: 4,
-        },
-        1024: {
-            slidesPerView: 4,
+            spaceBetween: 16,
         }
     }
 });

@@ -184,7 +184,7 @@
 
 .story-product {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     grid-template-rows: repeat(4, auto);
     align-items: start;
     column-gap: 1rem;
@@ -214,6 +214,9 @@
     font-size: var(--fs-body1);
     font-weight: var(--fw2);
     color: var(--gray-9);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .product-catagory {
@@ -221,6 +224,9 @@
     grid-row: 2;
     font-size: var(--fs-body1);
     color: var(--gray-9);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .pay-original {
@@ -228,6 +234,9 @@
     grid-row: 3;
     color: var(--gray-5);
     font-size: var(--fs-body2);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .pay-original span {
@@ -241,6 +250,8 @@
     /* align-items: center; */
     gap: .5rem;
     font-size: var(--fs-body1);
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .discount {
@@ -335,6 +346,15 @@
 
     .sale {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .story-product {
+        column-gap: 0.5rem;
+    }
+
+    .story-product figure {
+        width: 4.5rem;
+        height: 4.5rem;
     }
 }
 
