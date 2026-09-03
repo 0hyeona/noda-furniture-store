@@ -153,7 +153,7 @@ main {
     flex-direction: column;
     transform: translateX(100%);
     transition: all 0.6s ease 0s;
-    z-index: 101;
+    z-index: 1100;
 }
 
 .smart-overlay-menu.on {
