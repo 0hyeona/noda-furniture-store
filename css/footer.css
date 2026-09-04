@@ -14,7 +14,7 @@ footer {
 .foot-top .foot-menu1 {
     display: flex;
     gap: var(--space-1x-large);
-    padding-bottom: var(--space-1x-large)
+    padding-bottom: var(--space-1x-large);
 }
 
 .foot-menu1 li {
@@ -53,10 +53,17 @@ footer {
     gap: var(--space-normal);
 }
 
-.info-row dd,
-.info-row p {
+.info-text ,
+.info-text p {
     font-weight: var(--fw2);
 }
+
+.info-text {
+    font-size: var(--fs--h4);
+    display: flex;
+    gap: var(--space-normal);
+}
+
 
 .foot-top {
     /* border: 1px solid pink; */
@@ -96,6 +103,7 @@ footer {
     gap: var(--space-normal);
 }
 
+
 @media (max-width: 1024px) {
     .foot-main {
         display: block;
@@ -123,4 +131,9 @@ footer {
   .company-info {
     gap: var(--space-1x-large);
   }
+  .foot-top .foot-menu1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
 }
