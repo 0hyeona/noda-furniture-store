@@ -263,7 +263,7 @@
     grid-row: 1;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 8px;
     font-size: var(--fs-body1);
     color: var(--icon);
 }
@@ -272,9 +272,6 @@
     width: 1.25rem;
 }
 
-.pay {
-    color: var(--icon);
-}
 
 .sale {
     display: grid;
@@ -381,7 +378,6 @@
         grid-row: 1;
         display: flex;
         align-items: center;
-        gap: 1rem;
         font-size: var(--fs-body1);
         color: var(--icon);
     }
