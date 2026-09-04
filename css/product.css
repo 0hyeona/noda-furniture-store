@@ -1,0 +1,139 @@
+html {
+  font-size: var(--fs-pc);
+}
+
+/* 이미지 부모 크기 */
+.banner-design .banner .pc,
+.banner-design .banner .pad,
+.banner-design .banner .mobile {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+}
+
+/* 이미지 크기 */
+.banner-design .banner figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 제목 및 설명 */
+.con1 {
+  padding: var(--space-3x-large) 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--space-1x-large);
+}
+
+/* 제목 */
+.main-text h1,
+.sub-text p {
+  font-weight: var(--fw2);
+}
+
+
+
+/* 상품 카드리스트  */
+.con2 {
+  margin-bottom: var(--space-3x-large);
+}
+
+.con2 .common-frame {
+  display: flex;
+}
+
+.con2 .common-frame ul {
+  display: flex;
+  gap: var(--space-normal);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(444px, 1fr));
+  column-gap: var(--space-normal);
+  row-gap: var(--space-2x-large);
+}
+
+/* 카테고리 영역 */
+
+.card-list .section-1 {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* 카테고리 */
+.card-list .section-1 .catagory {
+  padding: var(--space-normal) 0;
+  color: var(--gray-5);
+}
+
+/* 상품명 */
+.card-list .section-1 .product-name {
+  color: var(--gray-9);
+  font-weight: var(--fw2);
+
+}
+
+/* 가격 - 정가 */
+.card-list .price .pay-original {
+  color: var(--gray-5);
+  text-decoration: line-through;
+}
+
+/* 가격 - 할인율 + 할인 가격 */
+.card-list .price .pay-discount {
+  display: flex;
+  gap: .5rem;
+}
+
+/* 할인율 */
+.pay-discount .discount {
+  color: var(--icon);
+}
+
+/* 할인 가격  */
+.pay-discount .pay {
+  color: var(--gray-9);
+  font-weight: var(--fw2);
+}
+
+/* 좋아요 부분 */
+.section-2 {
+  display: flex;
+  gap: .5rem;
+  padding-top: var(--space-normal);
+}
+
+.section-2 figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-2 figure {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  html {
+    font-size: var(--fs-pad);
+  }
+
+  .con2 .common-frame ul {
+    grid-template-columns: repeat(3, minmax(313px, 1fr));
+  }
+  
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: var(--fs-mobile);
+  }
+
+  .con2 .common-frame ul {
+    grid-template-columns: repeat(2, minmax(183px, 1fr)); 
+  }
+}
