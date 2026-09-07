@@ -247,15 +247,19 @@
     grid-column: 2;
     grid-row: 4;
     display: flex;
+    flex-wrap: wrap;
     /* align-items: center; */
     gap: .5rem;
     font-size: var(--fs-body1);
-    overflow: hidden;
-    white-space: nowrap;
+    min-width: 0;
 }
 
 .discount {
     color: var(--icon);
+}
+
+.pay-discount .pay {
+    white-space: nowrap;
 }
 
 .product-heart {
@@ -329,6 +333,18 @@
     max-width: 100%;
 }
 
+
+/* 노트북 반응형: 4개씩 보여지는 review-story 카드가 좁아져 가격/이름이 잘리는 구간 보정 */
+@media (max-width: 1366px) {
+    .story-product {
+        column-gap: 0.5rem;
+    }
+
+    .story-product figure {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}
 
 /* 패드 반응형 */
 @media (max-width: 1024px) {

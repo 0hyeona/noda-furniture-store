@@ -9,11 +9,6 @@ header {
 main {
     margin-top: 154px;
 }
-.smart-overlay-menu {
-    display: none;
-    z-index:1100;
-}
-
 .header-top {
     background-color: var(--gray-0);
 }
@@ -49,7 +44,7 @@ main {
 }
 
 .user-menu {
-    font-size: var(--fs--body2)
+    font-size: var(--fs-body2)
 }
 
 .gnb2depths {
@@ -151,12 +146,14 @@ main {
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
     transform: translateX(100%);
     transition: all 0.6s ease 0s;
     z-index: 1100;
 }
 
 .smart-overlay-menu.on {
+    visibility: visible;
     transform: translateX(0%);
 
 }
@@ -191,8 +188,17 @@ main {
     align-items: center;
 }
 
+.smart-overlay-menu-top .common-frame {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+
 .gnb-smart {
     display: flex;
+    width: max-content;
+    min-width: 100%;
+    justify-content: center;
     height: 4.285rem;
     gap: 1rem;
     font-weight: var(--fw2);
@@ -297,8 +303,3 @@ main {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-/* 가로 스크롤 : 스크롤이 필요할 때만 나오게 하는 코드*/
-/* .smart-overlay-menu-top .common-frame {
-    overflow-x : auto;
-
-} */
