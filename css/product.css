@@ -64,7 +64,7 @@ html {
 
 /* 카테고리 */
 .card-list .section-1 .catagory {
-  padding: var(--space-normal) 0;
+  padding-top: var(--space-normal);
   color: var(--gray-5);
 }
 
