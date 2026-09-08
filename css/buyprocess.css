@@ -1,5 +1,233 @@
 .info-product .common-frame {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 1rem;
+}
+.product-img { 
+    width: min(751px, 100%);
+    flex: 0 1 751px;
+}
+
+.thumbnail-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    line-height: 0;
+}
+
+.thumbnail-img img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.horizontal-scrool-gallery {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.horizontal-scrool-gallery .train-horizontal { 
+    display: flex;
+    gap: 1rem;
+}
+
+.train-horizontal figure { 
+    height: 9.3rem;
+    aspect-ratio: 1 / 1;
+    line-height: 0;
+}
+
+.train-horizontal figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-txt {
+    flex-grow: 1;
+    padding-left: 2rem;
+}
+
+.product-name {
     border: 1px solid red;
+    margin-bottom: 4rem;
+}
+
+.product-name .category-badge {
+    font-size: var(--fs--h3);
+    padding: 0.5rem 1rem;
+    background-color: var(--brown-1);
+    display: inline-block;
+    color: var(--gray-0);
+}
+
+.product-name .product-title {
+    font-weight: var(--fw2);
+    font-size: var(--fs--h1);
+    margin-top: .5rem;
+}
+
+.pay-frame .pay-original {
+    font-size: var(--fs--h3);
+    color: var(--gray-5);
+    text-decoration: line-through;
+}
+
+.pay-frame .pay-discount {
+    display: flex;
+    gap: .5rem;
+    font-size: var(--fs--h2);
+    color: var(--icon);
+}
+
+.pay {
+    color : var(--gray-9);
+    font-weight: var(--fw2);
+    margin-bottom: 6rem;
+}
+
+
+.benefit {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    gap: 2.2rem 1rem;
+    padding: 2rem 0;
+}
+
+.benefit dt { 
+    font-weight: var(--fw2);
+}
+
+.btn-coupon {
+    background-color: var(--sub-1);
+    padding: 0.125rem 0.5rem;
+    font-weight: var(--fw2);
+    font-size: var(--fs-body2);
+    display: inline-flex;
+    gap: .5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-coupon img { 
+    height: 1.5rem;
+}
+
+.benefit-list li { 
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-list li:last-of-type {
+    margin-bottom:0;
+
+}
+
+.benefit-list li:last-of-type {
+    margin-bottom: 0;
+}
+
+/*  채워야함 - 놓침 ㅎ*/
+dd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.benefit-list li .gray {
+    color: var(--gray-7);
+}
+
+.price-benefit span {
+    color: var(--gray-9);
+    display: flex;
+    gap: 1rem;
+}
+
+.price-benefit span p {
+    background-color: var(--sub-1);
+    border-radius: .25rem;
+    color: var(--icon);
+    font-size: var(--fs-body2);
+    width: 40px;
+    text-align: center;
+}
+
+.desc-benefit span .small {
+    font-size: var(--fs-body2);
+    color: var(--gray-7);
+}
+.benefits {
+    margin-bottom: 6rem;
+}
+
+.pay-info {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: end;
+}
+
+.pay-info .total-price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.total-price p {
+    font-size: var(--fs--h2);
+    font-weight: var(--fw2);
+    color: var(--icon);
+}
+
+.total-price .ori {
+    color: var(--gray-9);
+    font-weight: var(--fw2);
+    font-size: var(--fs--h2);
+}
+
+
+.pay-info .tip-info {
+    font-size: var(--fs-body2);
+    color: #426EFF;
+    padding-bottom: 6rem;
+}
+
+
+.btn-cart, .btn-buy {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 444px;
+    height: 70px;
+    text-decoration: none; /* a 태그 밑줄 제거 */
+    box-sizing: border-box;
+}
+
+/* 장바구니 버튼 */
+.btn-cart {
+    background-color: var(--gray-5); 
+    color: var(--gray-0);         
+    font-size: var(--fs--h3);
+    font-weight: var(--fw2);
+}
+
+/* 구매하기 버튼 */
+.btn-buy {
+    background-color: var(--brown-3);
+    color: var(--gray-0); 
+    font-size: var(--fs--h3);
+    font-weight: var(--fw2);
+}
+
+.pay-info .buttons {
     display: flex;
     gap: 1rem;
 }
