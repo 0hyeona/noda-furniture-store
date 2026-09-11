@@ -47,6 +47,7 @@ html {
 
 .con2 .common-frame ul {
   display: flex;
+  width: 100%;
   gap: var(--space-normal);
   display: grid;
   grid-template-columns: repeat(4, minmax(444px, 1fr));
@@ -92,8 +93,9 @@ html {
   color: var(--icon);
 }
 
-/* 할인 가격  */
-.pay-discount .pay {
+/* 할인 가격 및 일반 가격 */
+.pay-discount .pay,
+.price .pay-regular {
   color: var(--gray-9);
   font-weight: var(--fw2);
 }

@@ -4,7 +4,7 @@ let buyProductArray = [
         pmenu: '테이블',
         pname: '루버 오발 원목 식탁 (6인용)',
         pdesc: '입체적인 템바보드 다리와 부드러운 라운드 상판이 돋보이는 프리미엄 오크 원목 테이블',
-        saleprice: 70000,
+        pprice: 70000,
         heart: 892,
         pimg: 'list-1.png'
     },
@@ -47,7 +47,7 @@ let buyProductArray = [
         pname: '매트 세라믹 화병 (S/M)',
         pdesc: '오목한 내추럴 쉐입과 담백한 색감이 돋보이는 세라믹 화병',
 
-        saleprice: 75000,
+        pprice: 75000,
         heart: 54,
         pimg: 'list-5.png'
     },
@@ -57,7 +57,7 @@ let buyProductArray = [
         pname: '세라믹 픽스 스탠드 조명',
         pdesc: '도자기 특유의 자연스러운 질감과 은은한 조도가 어우러진 스탠드 조명',
 
-        saleprice: 168000,
+        pprice: 168000,
         heart: 88,
         pimg: 'list-6.png'
     },
@@ -67,7 +67,7 @@ let buyProductArray = [
         pname: '슬라임 원목 사이드 콘솔',
         pdesc: '부드러운 라인과 충분한 수납으로 공간을 정돈해주는 원목 콘솔',
 
-        saleprice: 416000,
+        pprice: 416000,
         heart: 41,
         pimg: 'list-7.png'
     },
@@ -109,7 +109,7 @@ let buyProductArray = [
         pmenu: '가구',
         pname: '아치형 원목 패브릭 수납 침대 (Q)',
         pdesc: '헤드보드와 넉넉한 수납을 한 번에 해결하는 원목 침대',
-        saleprice: 840000,
+        pprice: 840000,
         heart: 76,
         pimg: 'list-11.png'
     },
