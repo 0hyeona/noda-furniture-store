@@ -1,20 +1,38 @@
+.info-product {
+    padding: 6rem 0 8rem;
+}
+
+.info-product,
+.info-product * {
+    box-sizing: border-box;
+}
+
 .info-product .common-frame {
-    /* border: 1px solid red; */
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 751fr) minmax(0, 1057fr);
+    align-items: start;
     gap: 1rem;
 }
-.product-img { 
-    width: min(751px, 100%);
-    flex: 0 1 751px;
+
+.product-img,
+.product-txt {
+    min-width: 0;
+}
+
+.info-product figure {
+    margin: 0;
+    padding-bottom: 1rem;
 }
 
 .thumbnail-img {
     width: 100%;
     aspect-ratio: 1 / 1;
+    overflow: hidden;
     line-height: 0;
 }
 
-.thumbnail-img img { 
+.thumbnail-img img,
+.train-horizontal figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -22,212 +40,411 @@
 
 .horizontal-scrool-gallery {
     width: 100%;
-    box-sizing: border-box;
-    overflow-x: auto;
     margin-top: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    line-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brown-2) var(--gray-2);
 }
 
-.horizontal-scrool-gallery .train-horizontal { 
+.horizontal-scrool-gallery::-webkit-scrollbar {
+    height: 4px;
+}
+
+.horizontal-scrool-gallery::-webkit-scrollbar-track {
+    background: var(--gray-2);
+}
+
+.horizontal-scrool-gallery::-webkit-scrollbar-thumb {
+    background: var(--brown-2);
+}
+
+.horizontal-scrool-gallery .train-horizontal {
     display: flex;
+    width: max-content;
     gap: 1rem;
+    padding-bottom: 0.5rem;
 }
 
-.train-horizontal figure { 
+.train-horizontal figure {
+    flex: 0 0 9.3rem;
+    width: 9.3rem;
     height: 9.3rem;
-    aspect-ratio: 1 / 1;
+    overflow: hidden;
     line-height: 0;
 }
 
-.train-horizontal figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .product-txt {
-    flex-grow: 1;
-    padding-left: 2rem;
+    padding: 0;
+    overflow-wrap: anywhere;
 }
 
 .product-name {
-    border: 1px solid red;
     margin-bottom: 4rem;
 }
 
 .product-name .category-badge {
-    font-size: var(--fs--h3);
-    padding: 0.5rem 1rem;
-    background-color: var(--brown-1);
     display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--brown-5);
     color: var(--gray-0);
+    font-size: var(--fs--h3);
 }
 
 .product-name .product-title {
-    font-weight: var(--fw2);
+    margin-top: 0.5rem;
     font-size: var(--fs--h1);
-    margin-top: .5rem;
-}
-
-.pay-frame .pay-original {
-    font-size: var(--fs--h3);
-    color: var(--gray-5);
-    text-decoration: line-through;
-}
-
-.pay-frame .pay-discount {
-    display: flex;
-    gap: .5rem;
-    font-size: var(--fs--h2);
-    color: var(--icon);
-}
-
-.pay {
-    color : var(--gray-9);
     font-weight: var(--fw2);
+    line-height: var(--lh1);
+}
+
+.product-txt > .pay-frame {
     margin-bottom: 6rem;
 }
 
+.product-txt .pay-original {
+    color: var(--gray-5);
+    font-size: var(--fs--h3);
+    text-decoration: line-through;
+}
+
+.product-txt .pay-discount {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--icon);
+    font-size: var(--fs--h2);
+    line-height: var(--lh1);
+}
+
+.product-txt .pay-discount .pay {
+    margin: 0;
+    color: var(--gray-9);
+    font-weight: var(--fw2);
+}
 
 .benefit {
-    border: 1px solid red;
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: minmax(92px, 150px) minmax(0, 1fr) minmax(110px, 150px);
+    align-items: start;
     gap: 2.2rem 1rem;
     padding: 2rem 0;
 }
 
-.benefit dt { 
+.benefits {
+    margin-bottom: 6rem;
+}
+
+.benefit dt {
     font-weight: var(--fw2);
 }
 
-.btn-coupon {
-    background-color: var(--sub-1);
-    padding: 0.125rem 0.5rem;
-    font-weight: var(--fw2);
-    font-size: var(--fs-body2);
-    display: inline-flex;
-    gap: .5rem;
-    text-align: center;
+.info-product dd {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 0;
 }
 
-.btn-coupon img { 
-    height: 1.5rem;
+.benefit > dd:last-child {
+    justify-content: flex-end;
 }
 
-.benefit-list li { 
+.benefit-list {
+    width: 100%;
+}
+
+.benefit-list li {
     display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 1rem 1rem;
+    grid-template-columns: minmax(112px, 160px) minmax(0, 1fr);
+    gap: 1rem;
     margin-bottom: 1rem;
-}
-
-.benefit-list li:last-of-type {
-    margin-bottom:0;
-
 }
 
 .benefit-list li:last-of-type {
     margin-bottom: 0;
 }
 
-/*  채워야함 - 놓침 ㅎ*/
-dd {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.benefit-list li .gray {
+.benefit-list .gray {
     color: var(--gray-7);
 }
 
-.price-benefit span {
-    color: var(--gray-9);
+.price-benefit span,
+.desc-benefit span {
     display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.price-benefit span {
+    flex-direction: row;
     gap: 1rem;
 }
 
 .price-benefit span p {
+    width: 40px;
+    border-radius: 0.25rem;
     background-color: var(--sub-1);
-    border-radius: .25rem;
     color: var(--icon);
     font-size: var(--fs-body2);
-    width: 40px;
     text-align: center;
 }
 
-.desc-benefit span .small {
-    font-size: var(--fs-body2);
+.desc-benefit .small {
     color: var(--gray-7);
+    font-size: var(--fs-body2);
 }
-.benefits {
-    margin-bottom: 6rem;
+
+.btn-coupon,
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    padding: 0.25rem 0.65rem;
+    font-size: var(--fs-body2);
+    font-weight: var(--fw2);
+    white-space: nowrap;
+}
+
+.btn-coupon {
+    gap: 0.5rem;
+    background-color: var(--sub-1);
+}
+
+.btn-coupon img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .pay-info {
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .pay-info .total-price {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
     padding-bottom: 1rem;
 }
 
 .total-price p {
+    color: var(--icon);
     font-size: var(--fs--h2);
     font-weight: var(--fw2);
-    color: var(--icon);
 }
 
 .total-price .ori {
     color: var(--gray-9);
-    font-weight: var(--fw2);
     font-size: var(--fs--h2);
+    font-weight: var(--fw2);
 }
-
 
 .pay-info .tip-info {
-    font-size: var(--fs-body2);
-    color: #426EFF;
     padding-bottom: 6rem;
-}
-
-
-.btn-cart, .btn-buy {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 444px;
-    height: 70px;
-    text-decoration: none; /* a 태그 밑줄 제거 */
-    box-sizing: border-box;
-}
-
-/* 장바구니 버튼 */
-.btn-cart {
-    background-color: var(--gray-5); 
-    color: var(--gray-0);         
-    font-size: var(--fs--h3);
-    font-weight: var(--fw2);
-}
-
-/* 구매하기 버튼 */
-.btn-buy {
-    background-color: var(--brown-3);
-    color: var(--gray-0); 
-    font-size: var(--fs--h3);
-    font-weight: var(--fw2);
+    color: #426eff;
+    font-size: var(--fs-body2);
 }
 
 .pay-info .buttons {
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
     gap: 1rem;
+}
+
+.btn-cart,
+.btn-buy {
+    display: inline-flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 444px;
+    min-width: 0;
+    min-height: 70px;
+    padding: 1rem;
+    color: var(--gray-0);
+    font-size: var(--fs--h3);
+    font-weight: var(--fw2);
+    text-align: center;
+}
+
+.btn-cart {
+    background-color: var(--gray-5);
+}
+
+.btn-buy {
+    background-color: var(--brown-3);
+}
+
+.btn-cart:focus-visible,
+.btn-buy:focus-visible,
+.btn-coupon:focus-visible,
+.btn-link:focus-visible {
+    outline: 3px solid #426eff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+    .product-page main {
+        margin-top: 80px;
+    }
+
+    .product-page .smart-header,
+    .product-page .smart-header .logo img {
+        height: 80px;
+    }
+
+    .info-product {
+        padding: 3rem 0 7rem;
+    }
+
+    .train-horizontal figure {
+        flex-basis: 7rem;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .product-name {
+        margin-bottom: 3rem;
+    }
+
+    .product-txt > .pay-frame {
+        margin-bottom: 5rem;
+    }
+
+    .benefit {
+        grid-template-columns: minmax(82px, 112px) minmax(0, 1fr) minmax(82px, 112px);
+        gap: 1.6rem 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .benefit-list li {
+        grid-template-columns: minmax(92px, 125px) minmax(0, 1fr);
+    }
+
+    .benefits {
+        margin-bottom: 4rem;
+    }
+
+    .pay-info .tip-info {
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-page main {
+        margin-top: 60px;
+    }
+
+    .product-page .smart-header,
+    .product-page .smart-header .logo img {
+        height: 60px;
+    }
+
+    .product-page .smart-header .common-frame {
+        padding: 0 1rem;
+    }
+
+    .product-page .smart-header .common-frame .btn-menu {
+        right: 1rem;
+    }
+
+    .info-product {
+        padding: 3rem 0 6rem;
+    }
+
+    .info-product .common-frame {
+        display: block;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .train-horizontal figure {
+        flex-basis: 7.1rem;
+        width: 7.1rem;
+        height: 7.1rem;
+    }
+
+    .product-txt {
+        margin-top: 6rem;
+    }
+
+    .product-name {
+        margin-bottom: 1rem;
+    }
+
+    .product-name .product-title {
+        font-size: var(--fs--h2);
+    }
+
+    .product-txt > .pay-frame {
+        margin-bottom: 1rem;
+    }
+
+    .benefit {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit > dd:last-child {
+        grid-column: 1;
+    }
+
+    .benefit-list li {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .price-benefit span {
+        flex-wrap: wrap;
+    }
+
+    .benefits {
+        margin-bottom: 3rem;
+    }
+
+    .pay-info {
+        align-items: stretch;
+    }
+
+    .pay-info .total-price {
+        justify-content: space-between;
+    }
+
+    .pay-info .tip-info {
+        padding-bottom: 2rem;
+        text-align: right;
+    }
+
+    .pay-info .buttons {
+        gap: 0.75rem;
+    }
+
+    .btn-cart,
+    .btn-buy {
+        min-height: 54px;
+        font-size: var(--fs--h4);
+    }
+}
+
+@media (max-width: 374px) {
+    .benefit {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit > dd:last-child {
+        grid-column: 1;
+    }
+
+    .pay-info .buttons {
+        flex-direction: column;
+    }
+
+    .btn-cart,
+    .btn-buy {
+        max-width: none;
+    }
 }
