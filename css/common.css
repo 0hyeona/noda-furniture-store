@@ -112,6 +112,7 @@ html {
     font-family: 'pretendard', sans-serif;
     color: var(--gray-9);
     font-weight: var(--fw1);
+    scroll-behavior: smooth;
 }
 
 .common-frame {
