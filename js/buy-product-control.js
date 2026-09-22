@@ -21,7 +21,7 @@ if (productList && Array.isArray(buyProductArray)) {
 
     return `
     <li class="card-list">
-                <a href="#">
+                <a href="./product.html?pid=${list.pid}">
                   <figure>
                     <img src="./img/${list.pimg}" alt="상품 리스트 이미지 ${list.pid}번">
                   </figure>

@@ -99,6 +99,12 @@
     line-height: var(--lh1);
 }
 
+.product-name .product-description {
+    margin-top: 1rem;
+    color: var(--gray-7);
+    line-height: var(--lh2);
+}
+
 .product-txt>.pay-frame {
     margin-bottom: 6rem;
 }
@@ -121,6 +127,13 @@
     margin: 0;
     color: var(--gray-9);
     font-weight: var(--fw2);
+}
+
+.product-txt .pay-regular {
+    color: var(--gray-9);
+    font-size: var(--fs--h2);
+    font-weight: var(--fw2);
+    line-height: var(--lh1);
 }
 
 .benefit {
