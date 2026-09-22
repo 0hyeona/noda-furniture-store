@@ -303,11 +303,14 @@
     position: sticky;
     left: 0;
     top: 154px;
+    background-color: #fff; /* 배경색 추가 */
+    z-index: 10; /* 다른 콘텐츠 위로 오도록 레이어 순서 설정 */
+    padding: 0.5rem 0; /* 필요에 따라 상하 여백 추가 */
     /* border: 1px solid red; */
 }
 
 .sticky-product-menu a {
-    background-color: var(--gray-0);
+    background-color: #fff;
     width: 300px;
     height: 50px;
     display: flex;
@@ -441,7 +444,45 @@
 }
 
 .product-table {
-    border: 1px solid red;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.product-table th {
+    width: 250px;
+    padding: 1rem 1.2rem;
+    text-align: left;
+    background-color: var(--gray-100);
+}
+
+.product-table td {
+    padding: 1rem 1.2rem;
+}
+
+.product-del-table-list {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.product-del-table-list li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.product-del-table-list li::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    display: inline-block;
+}
+
+.del-desc {
+    color: var(--gray-700);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -480,6 +521,11 @@
     gap: .25rem;
 }
 
+@media (max-width:1400px) {
+    .product-table {
+        width: 100%;
+    }
+}
 
 @media (max-width: 1024px) {
     .product-page main {
@@ -538,6 +584,14 @@
 
     .review-gallery li img {
         width: 180px;
+    }
+
+    .sticky-product-menu {
+        top: 80px;
+    }
+
+    .product-table th {
+        width: clamp(80px, 20vw, 150px);
     }
 
     .sticky-product-menu {
@@ -670,6 +724,24 @@
 
     .sticky-product-menu {
         top: 63px;
+    }
+
+    .product-del-table-list li::before {
+        left: 5px;
+        top: 5px;
+        width: 3px;
+        height: 3px;
+    }
+
+    .sticky-product-menu {
+        top: 60px;
+    }
+
+}
+
+@media (max-width:430px) {
+    .product-table th {
+        width: clamp(54px, 20vw, 150px);
     }
 }
 
