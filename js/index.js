@@ -42,8 +42,20 @@ gnbSmartList.forEach((li, idx) => {
     })
 });
 
+// 실제 상품 목록이 준비된 NEW / SHOP 메뉴만 목록 페이지로 연결
+document.querySelectorAll('.gnb>li:nth-child(2) a, .gnb>li:nth-child(3) a').forEach((link) => {
+    link.setAttribute('href', './list.html');
+});
+
+[gnb2DepthsList[0], gnb2DepthsList[1]].forEach((menuPanel) => {
+    menuPanel?.querySelectorAll('a').forEach((link) => {
+        link.setAttribute('href', './list.html');
+    });
+});
+
 
 // 슬라이드 영역 
+if (typeof Swiper !== 'undefined') {
 const station = new Swiper('.hero-slider', {
     // 반복
     loop: true,
@@ -102,3 +114,4 @@ const reviewStoryWrap = new Swiper('.review-story-wrap', {
         }
     }
 });
+}

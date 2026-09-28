@@ -8,9 +8,27 @@ function formatProductMoney(value) {
 }
 
 const requestedProductId = Number(getParameter('pid'));
-const productInfo = Array.isArray(buyProductArray)
-  ? buyProductArray.find((item) => item.pid === requestedProductId) || buyProductArray[0]
+const requestedSource = getParameter('source');
+const saleProduct = requestedSource === 'sale' && typeof productArray !== 'undefined' && Array.isArray(productArray)
+  ? productArray.find((item) => item.detailPid === requestedProductId)
   : null;
+
+// 메인 특가 상품에서 이동한 경우 메인 상품 데이터를 상세 페이지 형식으로 변환합니다.
+const productInfo = saleProduct
+  ? {
+      pid: saleProduct.detailPid,
+      pmenu: saleProduct.menu,
+      pname: saleProduct.pname,
+      pdesc: saleProduct.pdesc,
+      pprice: saleProduct.price,
+      pdiscount: saleProduct.discount,
+      saleprice: saleProduct.salePrice,
+      heart: saleProduct.pHeart,
+      pimg: saleProduct.pImg
+    }
+  : Array.isArray(buyProductArray)
+    ? buyProductArray.find((item) => item.pid === requestedProductId) || buyProductArray[0]
+    : null;
 
 if (productInfo) {
   const hasDiscount = Number(productInfo.pdiscount) > 0 && Number(productInfo.saleprice) > 0;

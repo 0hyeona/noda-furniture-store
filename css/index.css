@@ -12,6 +12,12 @@
     object-fit: cover;
 }
 
+.hero-slider .swiper-slide>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .hero-slider .swiper-pagination-bullets,
 .hero-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
 .hero-slider .swiper-pagination-custom,

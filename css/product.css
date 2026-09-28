@@ -416,6 +416,33 @@
     height: 1.5rem;
 }
 
+.star img.is-empty {
+    filter: grayscale(1);
+    opacity: 0.2;
+}
+
+.review-etc a.on {
+    color: var(--gray-9);
+    font-weight: 600;
+}
+
+.review-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 4rem 1rem;
+    color: var(--gray-7);
+    text-align: center;
+    background-color: var(--sub-1);
+}
+
+.review-empty strong {
+    color: var(--gray-9);
+    font-size: 1.1rem;
+}
+
 .review-content {
     /* border : 1px solid gold; */
     width: 100%;

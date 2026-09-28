@@ -2,6 +2,8 @@ let productArray = [
     {
         // 상품 아이디
         pid: 0,
+        // 연결할 상세 상품 아이디
+        detailPid: 12,
         // 상품 카테고리
         menu: '소파',
         // 상품 이름
@@ -22,6 +24,7 @@ let productArray = [
     {
         // 상품 아이디
         pid: 1,
+        detailPid: 1,
         // 상품 카테고리
         menu: '테이블',
         // 상품 이름
@@ -42,6 +45,7 @@ let productArray = [
     {
         // 상품 아이디
         pid: 2,
+        detailPid: 4,
         // 상품 카테고리
         menu: '수납장',
         // 상품 이름
@@ -62,6 +66,7 @@ let productArray = [
     {
         // 상품 아이디
         pid: 3,
+        detailPid: 11,
         // 상품 카테고리
         menu: '침대',
         // 상품 이름
@@ -82,6 +87,7 @@ let productArray = [
     {
         // 상품 아이디
         pid: 4,
+        detailPid: 2,
         // 상품 카테고리
         menu: '의자',
         // 상품 이름
@@ -102,6 +108,7 @@ let productArray = [
     {
         // 상품 아이디
         pid: 5,
+        detailPid: 6,
         // 상품 카테고리
         menu: '조명',
         // 상품 이름

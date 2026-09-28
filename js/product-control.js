@@ -15,7 +15,7 @@ if (saleUlTag && Array.isArray(productArray)) {
     let result = productArray.map(product => {
         return `
                 <li>
-                    <a href="./product.html">
+                    <a href="./product.html?pid=${product.detailPid}&amp;source=sale">
                         <figure>
                             <img src="./img/${product.pImg}" alt="특가상품 ${product.pname}">
                         </figure>
