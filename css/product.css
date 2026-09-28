@@ -362,7 +362,7 @@
 }
 
 .review {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -370,7 +370,7 @@
 
 .review-user {
     width: 291px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     gap: 1rem;
     background-color: var(--sub-1);
     padding: 2rem;
@@ -402,7 +402,7 @@
 
 
 .review>li {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     gap: 1rem;
 }
