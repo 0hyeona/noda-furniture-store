@@ -8,12 +8,12 @@ const reviewProfiles = [
 ];
 
 const reviewImageSets = [
-    ['review-img1.jpg', 'review-img2.jpg', 'review-img3.jpg'],
-    ['review-img4.jpg', 'review-img5.jpg'],
-    ['review-img6.jpg'],
-    ['review-img2.jpg', 'review-img5.jpg'],
-    ['review-img1.jpg', 'review-img4.jpg'],
-    ['review-img3.jpg', 'review-img6.jpg']
+    ['review-img1.jpg', 'review/1.png', 'review/2.png', 'review/3.png'],
+    ['review-img2.jpg', 'review/4.png', 'review/5.png', 'review/6.png'],
+    ['review-img3.jpg', 'review/7.png', 'review/8.png', 'review/9.png'],
+    ['review-img4.jpg', 'review/10.png', 'review/11.png', 'review/12.png'],
+    ['review-img5.jpg', 'review/13.png', 'review/14.png'],
+    ['review-img6.jpg', 'review/15.png', 'review/16.png']
 ];
 
 const reviewMessages = [
