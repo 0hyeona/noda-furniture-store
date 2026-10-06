@@ -133,6 +133,102 @@ html {
     display: none;
 }
 
+/* 준비중 안내 모달 */
+body.ready-modal-open {
+    overflow: hidden;
+}
+
+.ready-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: var(--space-normal);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.ready-modal.on {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ready-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 12, 13, 0.58);
+}
+
+.ready-modal__dialog {
+    position: relative;
+    z-index: 1;
+    width: min(26rem, 100%);
+    padding: 3rem 2rem 2rem;
+    border-radius: 1rem;
+    background: var(--gray-0);
+    box-shadow: 0 1.5rem 4rem rgba(12, 12, 13, 0.22);
+    text-align: center;
+    transform: translateY(0.75rem);
+    transition: transform 0.2s ease;
+}
+
+.ready-modal.on .ready-modal__dialog {
+    transform: translateY(0);
+}
+
+.ready-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.9rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    background: transparent;
+    color: var(--gray-7);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ready-modal__eyebrow {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--main);
+    font-size: var(--fs-detail);
+    font-weight: var(--fw2);
+    letter-spacing: 0.18em;
+}
+
+.ready-modal__dialog h2 {
+    margin-bottom: 0.75rem;
+    font-size: var(--fs--h2);
+}
+
+.ready-modal__dialog p {
+    color: var(--gray-7);
+}
+
+.ready-modal__confirm {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.9rem 1rem;
+    border: 0;
+    border-radius: 0.35rem;
+    background: var(--gray-9);
+    color: var(--gray-0);
+    font: inherit;
+    font-weight: var(--fw2);
+    cursor: pointer;
+}
+
+.ready-modal__close:focus-visible,
+.ready-modal__confirm:focus-visible {
+    outline: 2px solid var(--main);
+    outline-offset: 3px;
+}
+
 @media (max-width:1024px) {
 
     /* 기본 폰트 14 */
@@ -185,6 +281,10 @@ html {
 
     .mobile {
         display: block;
+    }
+
+    .ready-modal__dialog {
+        padding: 2.5rem 1.5rem 1.5rem;
     }
 
 }

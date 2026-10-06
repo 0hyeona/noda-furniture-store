@@ -53,6 +53,66 @@ document.querySelectorAll('.gnb>li:nth-child(2) a, .gnb>li:nth-child(3) a').forE
     });
 });
 
+// 아직 연결되지 않은 링크 안내 모달
+const readyModal = document.createElement('div');
+readyModal.className = 'ready-modal';
+readyModal.setAttribute('aria-hidden', 'true');
+readyModal.innerHTML = `
+    <div class="ready-modal__backdrop" data-ready-modal-close></div>
+    <section class="ready-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="ready-modal-title" tabindex="-1">
+        <button class="ready-modal__close" type="button" data-ready-modal-close aria-label="모달 닫기">&times;</button>
+        <span class="ready-modal__eyebrow">NODA</span>
+        <h2 id="ready-modal-title">준비중입니다</h2>
+        <p>더 좋은 모습으로 곧 찾아올게요.</p>
+        <button class="ready-modal__confirm" type="button" data-ready-modal-close>확인</button>
+    </section>
+`;
+document.body.appendChild(readyModal);
+
+let readyModalTrigger = null;
+
+function openReadyModal(trigger) {
+    readyModalTrigger = trigger;
+    readyModal.classList.add('on');
+    readyModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('ready-modal-open');
+    readyModal.querySelector('.ready-modal__confirm').focus();
+}
+
+function closeReadyModal() {
+    readyModal.classList.remove('on');
+    readyModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('ready-modal-open');
+    readyModalTrigger?.focus();
+    readyModalTrigger = null;
+}
+
+document.addEventListener('click', function(e) {
+    const closeButton = e.target.closest('[data-ready-modal-close]');
+    if (closeButton) {
+        closeReadyModal();
+        return;
+    }
+
+    const pendingLink = e.target.closest('a[href="#"]');
+    if (!pendingLink) return;
+
+    // 메뉴 제어와 리뷰 기능처럼 이미 동작이 있는 링크는 제외
+    const isFunctionalControl = pendingLink.closest('.btn-menu, .btn-close, .gnb-smart')
+        || pendingLink.matches('[data-review-action]');
+
+    if (isFunctionalControl) return;
+
+    e.preventDefault();
+    openReadyModal(pendingLink);
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && readyModal.classList.contains('on')) {
+        closeReadyModal();
+    }
+});
+
 
 // 슬라이드 영역 
 if (typeof Swiper !== 'undefined') {

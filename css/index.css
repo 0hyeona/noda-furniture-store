@@ -1,3 +1,75 @@
+/* 메인 혜택 팝업 */
+body.main-popup-open {
+    overflow: hidden;
+}
+
+.main-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(12, 12, 13, 0.58);
+}
+
+.main-popup.on {
+    display: flex;
+}
+
+.main-popup__panel {
+    width: min(500px, calc(100vw - 3rem));
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    background: var(--gray-0);
+    box-shadow: 0 1.5rem 4rem rgba(12, 12, 13, 0.3);
+}
+
+.main-popup__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.main-popup__panel>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-popup__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 3.5rem;
+    padding: 0 0.9rem;
+}
+
+.main-popup__buttons button {
+    border: 0;
+    background: transparent;
+    color: var(--gray-9);
+    font: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.main-popup__buttons button:hover {
+    text-decoration: underline;
+}
+
+.main-popup__buttons button:focus-visible {
+    outline: 2px solid var(--main);
+    outline-offset: 3px;
+}
+
 /* 히어로 배너 */
 .hero-slider {
     width: 100%;
@@ -354,6 +426,10 @@
 
 /* 패드 반응형 */
 @media (max-width: 1024px) {
+    .main-popup__panel {
+        width: min(460px, calc(100vw - 3rem));
+    }
+
     .hero-slider {
         height: auto;
         aspect-ratio: 1 / 1;
@@ -379,6 +455,24 @@
 
 /* 모바일 반응형 */
 @media (max-width: 768px) {
+    .main-popup {
+        padding: 1rem;
+    }
+
+    .main-popup__panel {
+        width: min(400px, calc(100vw - 2rem));
+        max-height: calc(100vh - 2rem);
+    }
+
+    .main-popup__buttons {
+        min-height: 3.25rem;
+        padding: 0 0.75rem;
+    }
+
+    .main-popup__buttons button {
+        font-size: 1rem;
+    }
+
     .hero-slider {
         aspect-ratio: 402 / 500;
     }
